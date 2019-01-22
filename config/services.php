@@ -43,8 +43,8 @@ return [
     'firebase' => [
         //'api_key' => 'API_KEY', // Only used for JS integration
         //'auth_domain' => 'AUTH_DOMAIN', // Only used for JS integration
-        'database_url' => 'https://laravel-api-977b2.firebaseio.com',
-        'secret' => 'vAbQvi4M9EuiQMeGz8R9My1lEJ1zIMsEf5Jf2tsc',
+        //'database_url' => 'https://laravel-api-977b2.firebaseio.com',
+        //'secret' => 'vAbQvi4M9EuiQMeGz8R9My1lEJ1zIMsEf5Jf2tsc',
         //'storage_bucket' => 'STORAGE_BUCKET', // Only used for JS integration
     ],
 
