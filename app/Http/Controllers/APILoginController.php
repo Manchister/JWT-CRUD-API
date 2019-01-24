@@ -37,29 +37,5 @@ class APILoginController extends Controller
 
         return response()->json(compact('token'));
     }
-
-
-    // public function login(Request $request)
-    // {
-    //     $validator = Validator::make($request->all(),[
-    //         'email' => 'required|string|max:255',
-    //         'password' => 'required',
-    //     ]);
-
-    //     if ($validator->fails()) {
-    //         return response()->json($validator->errors());
-    //     }
-
-    //     $cred = $request->only('email', 'password');
-
-    //     try {
-    //         if (! $token = JWTAuth::attempt($cred)) {
-    //             return response()->json(['error' => 'invalid email or password',[401]]);
-    //         }
-    //     } catch (JWTAuthException $e ) {
-    //         return response()->json(['error' => 'could not creat the token',[500]]);
-    //     }
-
-    //     return response()->json(compact('token'));
-    // }
+    
 }

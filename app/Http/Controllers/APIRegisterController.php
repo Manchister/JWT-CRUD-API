@@ -17,6 +17,7 @@ class APIRegisterController extends Controller
 
     public function register(Request $request)
     {
+
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -27,16 +28,17 @@ class APIRegisterController extends Controller
             return response()->json($validator->errors());
         }
 
-        User::create([
+        $user = User::create([
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'password' => bcrypt($request->get('password')),
-        ]);
+        ])->first();
 
-        $user = User::first();
         $token = JWTAuth::fromUser($user);
 
         return response()->json(compact('token'));
+
+        
     }
 
 }
